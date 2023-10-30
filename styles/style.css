@@ -163,7 +163,7 @@
 }
 
 .services__content li{
-    width: 100%;
+    width: 50%;
     display:flex;
     flex-direction: column;
     align-items: center;
@@ -235,7 +235,7 @@ background: radial-gradient(#c404c4 50%, #570057 100%);
     background: var(--black-color);
     display:flex;
     width: 100%;
-    height: 200vh;
+    height: 100vh;
 }
 
 .portfolio__container {
@@ -250,7 +250,6 @@ background: radial-gradient(#c404c4 50%, #570057 100%);
 .portfolio__content {
     display-model: flex;
     width: 1200px;
-    background-color: var(--gray-color);
     opacity: 0.90;
     border-radius: 0.5rem;
 }
@@ -355,12 +354,10 @@ background: radial-gradient(#c404c4 50%, #570057 100%);
     opacity: 0.95;
     display: flex;
     flex-direction: column;
-    background: var(--gray-color);
-
 }
 
 .contact__container h1{
-    font-size: 2rem;
+    font-size: 4rem;
     color: var(--white-color);
     font-weight: 600;
     letter-spacing: 0.1rem;
@@ -485,8 +482,7 @@ background: radial-gradient(#c404c4 50%, #570057 100%);
         flex-direction: column;
         align-items: center;
         float: left;
-
-        margin: 0 0 3rem ;
+        margin: 0 0 3rem;
     }
 
     .Software_img {
