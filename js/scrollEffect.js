@@ -5,9 +5,8 @@ function extendBarsOnScroll() {
     const barWebs = document.querySelectorAll(".barWeb");
     const portfolioContent = document.getElementById("portfolio__content");
 
-    // Define individual widths for each "barDev" and "barWeb"
-    const barDevWidths = ["900px", "900px", "650px", "700px"]; // Example widths for "barDev"
-    const barWebWidths = ["800px", "800px", "800px"]; // Example widths for "barWeb"
+    const barDevWidths = ["75%", "75%", "60%", "60%"];
+    const barWebWidths = ["70%", "70%", "70%"];
 
     // Function to set the width of "barDev" and "barWeb" spans with a smooth transition
     function setWidths() {

@@ -6,6 +6,20 @@
     scroll-behavior: smooth;
     z-index: 999;
 }
+
+/*
+    SCROLLBAR
+ */
+::-webkit-scrollbar {
+    width: 0.5rem;
+    height: 0.5rem;
+    background-color: #1d1d1f;
+    color: black;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #86868b;
+    border-radius: 0.5rem;
+}
 :root {
     --black-color: black;
     --white-color: #f5f5f7;
@@ -149,7 +163,7 @@
 }
 
 .services__content li{
-    width: 700px;
+    width: 100%;
     display:flex;
     flex-direction: column;
     align-items: center;
@@ -316,6 +330,7 @@ background: radial-gradient(#c404c4 50%, #570057 100%);
     width: 4.5rem;
     margin: 0.25rem 2rem 0 1rem;
     filter: drop-shadow(1px 1px 5px var(--black-color));
+    object-fit: fill;
 }
 
 /***********************************************
@@ -397,4 +412,206 @@ background: radial-gradient(#c404c4 50%, #570057 100%);
     width: 2rem;
     margin-right: 1rem;
     filter: drop-shadow(1px 1px 5px var(--black-color));
+}
+/***********************************************
+ MEDIA QUERIES
+***********************************************/
+/* 1400px */
+@media screen and (max-width: 960px ) {
+    /***********************************************
+     NAVBAR MEDIA 1500px
+    ***********************************************/
+    .navbar__container {
+        height: 5rem;
+        width: 75%;
+        border-radius: 0.2rem;
+    }
+    .navbar__logo h2{
+        font-size: 1.2rem;
+        color: var(--white-color);
+        padding-left: 1rem;
+    }
+    .navbar__logo {
+        padding-left: 1rem;
+    }
+
+    .navbar__logo-img {
+        resize: block;
+        height: 3.5rem;
+        width: 3.5rem;
+        image-rendering: smooth;
+    }
+
+    .navbar__container ul {
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+    }
+    .navbar__container ul li a{
+        text-decoration: none;
+        padding-right: 1.5rem;
+        transition: all 0.1s ease-in;
+        font-size: 1.2rem;
+    }
+    .navbar__container ul li a:hover {
+        color: #2997ff;
+        transition: all 0.1s ease-out;
+    }
+    /***********************************************
+     ABOUT MEDIA 1500px
+    ***********************************************/
+
+    .about__content {
+        width: 100%;
+        height: 75%;
+    }
+
+    .about__content h1 {
+        font-size: 6rem;
+    }
+
+    .about__content__text {
+        font-size: 2rem;
+    }
+
+    /***********************************************
+     SERVICES MEDIA 1500px
+    ***********************************************/
+
+
+    .services__content li{
+        width: 100%;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        float: left;
+
+        margin: 0 0 3rem ;
+    }
+
+    .Software_img {
+        height: 16rem;
+        width: 16rem;
+        filter: none;
+        box-shadow: 0 0 5rem 0.125rem mediumblue;
+        background: radial-gradient(rgba(0,0,205, 1),rgba(0,0,205, 0.295)) ;
+    }
+
+    .Web_img {
+        height: 16rem;
+        width: 16rem;
+        filter: none;
+        box-shadow: 0 0 5rem 0.125rem purple;
+        background: radial-gradient(rgba(128,0,128, 1),rgba(128,0,128, 0.33)) ;
+    }
+
+    .services__content li h1 {
+        font-size: 4.5rem;
+        padding: 1rem;
+        color: #f5f5f7;
+        font-weight: 600;
+        letter-spacing: 0.01rem;
+    }
+
+    .services__content li pre{
+        padding:2rem;
+        }
+
+    .services__content li pre{
+        font-size: 1rem;
+    }
+
+    /***********************************************
+     PORTFOLIO MEDIA 1500px
+    ***********************************************/
+
+    .portfolio {
+        background: var(--black-color);
+        display:flex;
+        width: 100%;
+        height: 100vh;
+        justify-content: center;
+    }
+
+    .portfolio__container {
+        width: 99%;
+        align-items: center;
+    }
+
+    .portfolio__content {
+        height: 50%;
+    }
+
+    .portfolio__container h1 {
+        padding: 2rem;
+        font-size: 5rem;
+    }
+
+    .portfolio__content ul {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        list-style: none;
+        justify-content: right;
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+    .portfolio__content ul li{
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-items: center;
+        align-items: center;
+        margin: 0.75rem 1rem;
+    }
+    .portfolio__content ul li p {
+        display: none;
+    }
+
+    .barDev {
+        height: 30px;
+    }
+
+    .barWeb {
+        height: 30px;
+    }
+    .icon {
+        height: 6rem;
+        width: 6rem;
+    }
+
+    /***********************************************
+     CONTACT MEDIA 1500px
+    ***********************************************/
+
+    .contact__container {
+        width: 85%;
+        height: 55%;
+        align-content: center;
+    }
+
+    .contact__container h1{
+        font-size: 3rem;
+    }
+
+    .contact__content {
+        align-content: center;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .contact__content li{
+        margin: 1rem;
+    }
+
+    .contact__content li pre {
+        font-size: 2rem;
+    }
+
+    .contact__content li a {
+        font-size: 2rem;
+    }
+
+
 }
