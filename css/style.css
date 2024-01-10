@@ -12,10 +12,9 @@
 **************************************************/
 .navbar {
     background: transparent;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(15px);
     position: fixed;
     width: 100%;
-    top: 0;
     z-index: 100;
 }
 .navbar_container{
@@ -23,30 +22,27 @@
     height: 50px;
     background-color: black;
     align-items: center;
-    justify-content: space-between;
-    opacity: 0.8;
+    justify-content: space-around;
+    transition: all ease-in-out 0.3s;
+    border-bottom: 1px solid white;
 }
 
 .navbar_logo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display:flex;
     margin-left: 1rem;
-    text-decoration: none;
-    color: #F5F5F7;
-    font-size: 1.5rem;
-    font-weight: 500;
 }
 
 .navbar_logo_img {
     width: 2rem;
     height: 2rem;
+    transition: all ease-in 0.3s;
 }
 
 .navbar_menu {
     display: flex;
     list-style: none;
     margin-right: 1rem;
+
 }
 
 .navbar_menu_item {
@@ -56,7 +52,7 @@
 .navbar_links {
     color: #F5F5F7;
     text-decoration: none;
-    font-size: 0.7rem;
+    font-size: 0.85rem;
     font-weight: 90;
     padding: 1rem;
 }
@@ -102,6 +98,22 @@
     font-size: 1.4rem;
     font-weight: 535;
     letter-spacing: -0.05rem;
+}
+
+@media screen and (max-width: 900px) {
+    .hero_container {
+        text-align: center;
+    }
+
+    .hero_container h1 {
+        font-size: 5.46364rem;
+        letter-spacing: -0.15rem;
+    }
+
+    .hero_container p {
+        font-size: 1.4rem;
+        font-weight: 545;
+    }
 }
 
 
@@ -188,7 +200,41 @@
     letter-spacing: -0.05rem;
 }
 
-
+@media screen and (max-width: 900px) {
+    .about {
+        display: flex;
+        height: 250vh;
+        width: 100%;
+        background: black;
+    }
+    .about_container {
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+    }
+    .about_background {
+        display: none;
+    }
+    .grid-item {
+        padding: 1rem;
+        border-radius: 0.5rem;
+        width: 82.5%;
+    }
+    .grid-item-5 h1{
+        color: #f1f1f1f1;
+        font-size: 3rem;
+        letter-spacing: -0.10rem;
+        font-weight: 545;
+    }
+    .grid-item-5 p {
+        color: #f1f1f1f1;
+        font-size: 1rem;
+        font-weight: 535;
+        letter-spacing: -0.05rem;
+    }
+}
 
 /**************************************************
     :: portfolio
