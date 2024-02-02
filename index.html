@@ -12,12 +12,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="index, follow">
     <script src="js/navBarScrolling.js" crossorigin="anonymous"></script>
+    <script src="js/HeroScrolling.js" crossorigin="anonymous"></script>
 </head>
 <body>
 <!--    Nav -->
     <nav>
-        <div class="navbar">
-            <div class="navbar_container" id="navbar">
+        <div class="navbar" id="navbar-wrapper">
+            <div class="navbar_container smooth-transition" id="navbar">
                 <a class="navbar_logo" href="index.html"><img class="navbar_logo_img" id="logo" src="img/Logo.png" alt="Schmitt Software"></a>
                 <ul class="navbar_menu">
                     <li class="navbar_item"><a class="navbar_links" href="#hero">Home</a></li>
@@ -31,14 +32,14 @@
     <section>
         <div class="hero" id="hero">
             <div class="hero_container">
-                <h1>Schmitt Software</h1>
+                <h1 id="hero-title">Schmitt Software</h1>
                 <p>Turning Ideas into digital masterpieces</p>
             </div>
         </div>
     </section>
 <!--    About -->
-    <section>
-        <h1 class="about_title" id="about">About us</h1>
+    <section id="about">
+        <h1 class="about_title">About us</h1>
         <div class="about">
             <div class="about_container">
                 <img class="about_background" src="img/Logo.png" alt="">
@@ -119,7 +120,6 @@
         <div class="portfolio" id="portfolio">
             <h1>The portfolio</h1>
             <div class="portfolio_container">
-
             </div>
         </div>
     </section>
