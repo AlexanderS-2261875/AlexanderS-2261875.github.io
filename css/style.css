@@ -76,8 +76,14 @@
     height: 100vh;
     width: 100%;
     background: #F5F5F7;
-    animation: Hero-Background linear;
+    -webkit-animation: Hero-background linear;
+    -o-animation: Hero-background linear;
+    animation: Hero-background linear;
+    -webkit-animation-timeline: view();
+    -o-animation-timeline: view();
     animation-timeline: view();
+    -webkit-animation-range-start:100vh;
+    -o-animation-range-start:100vh;
     animation-range-start:100vh;
 }
 
@@ -93,8 +99,14 @@
     letter-spacing: 0.05rem;
     font-weight: 555;
     opacity: 1;
+    -webkit-animation: Hero-Title linear;
+    -o-animation: Hero-Title linear;
     animation: Hero-Title linear;
+    -webkit-animation-timeline: view();
+    -o-animation-timeline: view();
     animation-timeline: view();
+    -webkit-animation-range:exit -200px;
+    -o-animation-range:exit -200px;
     animation-range:exit -200px;
 }
 
@@ -105,11 +117,24 @@
     letter-spacing: -0.05rem;
 }
 
-@keyframes Hero-Title {
-    from {scale: 0.5 0.5; opacity: 1;}
-    to   {scale: 1 1; opacity: 0;}
+@-webkit-keyframes Hero-Title {
+    from {scale: 0.5 0.5;}
+    to   {scale: 1 1;}
 }
-
+@-o-keyframes Hero-Title {
+    from {scale: 0.5 0.5;}
+    to   {scale: 1 1;}
+}
+@keyframes Hero-Title {
+    from {scale: 0.5 0.5;}
+    to   {scale: 1 1;}
+}
+@-webkit-keyframes Hero-Background {
+    to {background: black}
+}
+@-o-keyframes Hero-Background{
+    to {background: black}
+}
 @keyframes Hero-Background{
     to {background: black}
 }
@@ -135,6 +160,14 @@
         font-size: 1.4rem;
         font-weight: 545;
     }
+    @-webkit-keyframes Hero-Title {
+        from {scale: 1 1; opacity: 1;}
+        to   {scale: 1.5 1.5; opacity: 0;}
+    }
+    @-o-keyframes Hero-Title {
+        from {scale: 1 1; opacity: 1;}
+        to   {scale: 1.5 1.5; opacity: 0;}
+    }
     @keyframes Hero-Title {
         from {scale: 1 1; opacity: 1;}
         to   {scale: 1.5 1.5; opacity: 0;}
@@ -151,7 +184,9 @@
     height: 100vh;
     width: 100%;
     background: black;
-    animation: fade-in linear;
+    -webkit-animation: fad-in linear;
+    -o-animation: fad-in linear;
+    animation: fad-in linear;
 }
 .about_title {
     background-color: black;
@@ -168,8 +203,14 @@
     gap: 10px;
     text-align: center;
     align-items: center;
+    -webkit-animation: fade-in linear forwards;
+    -o-animation: fade-in linear forwards;
     animation: fade-in linear forwards;
+    -o-animation-timeline: view();
+    -webkit-animation-timeline: view();
     animation-timeline: view();
+    -o-animation-range: entry;
+    -webkit-animation-range: entry;
     animation-range: entry;
 }
 
@@ -234,6 +275,14 @@
     letter-spacing: -0.05rem;
 }
 
+@-webkit-keyframes fade-in {
+    from{scale: 0.8; opacity: 0;}
+    to { scale: 1; opacity: 1;}
+}
+@-o-keyframes fade-in {
+    from{scale: 0.8; opacity: 0;}
+    to { scale: 1; opacity: 1;}
+}
 @keyframes fade-in {
     from{scale: 0.8; opacity: 0;}
     to { scale: 1; opacity: 1;}
@@ -265,7 +314,11 @@
         padding: 1rem;
         border-radius: 0.5rem;
         width: 85%;
+        -webkit-animation: fade-in linear;
+        -o-animation: fade-in linear;
         animation: fade-in linear;
+        -webkit-animation-timeline:view(600px 0px) ;
+        -o-animation-timeline: view(600px 0px);
         animation-timeline: view(600px 0px);
     }
     .grid-item-5 h1{
