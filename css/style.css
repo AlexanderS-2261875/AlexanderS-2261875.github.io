@@ -14,10 +14,12 @@
 .navbar {
     background: transparent;
     backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
     position: fixed;
     width: 100%;
     z-index: 100;
     transition: all ease-in-out 0.3s;
+    -webkit-transition: all ease-in-out 0.3s;
 }
 .navbar_container{
     display: flex;
@@ -62,9 +64,7 @@
 .navbar_links:hover {
     color: #0067ff;
     text-decoration: none;
-    font-size: 0.7rem;
     font-weight: 90;
-    padding: 1rem;
 }
 
 /**************************************************
@@ -72,19 +72,14 @@
 **************************************************/
 
 .hero {
-    display: flex;
-    height: 100vh;
+    height: 125vh;
     width: 100%;
     background: #F5F5F7;
-    -webkit-animation: Hero-background linear;
-    -o-animation: Hero-background linear;
-    animation: Hero-background linear;
-    -webkit-animation-timeline: view();
-    -o-animation-timeline: view();
+    -webkit-animation: Hero-Background linear forwards;
+    -o-animation: Hero-Background linear forwards;
+    animation: Hero-Background linear forwards;
     animation-timeline: view();
-    -webkit-animation-range-start:100vh;
-    -o-animation-range-start:100vh;
-    animation-range-start:100vh;
+    animation-range: contain;
 }
 
 .hero_container {
@@ -95,18 +90,13 @@
 
 .hero_container h1 {
     color: black;
-    font-size: 20rem;
+    font-size: 18rem;
     letter-spacing: 0.05rem;
     font-weight: 555;
-    opacity: 1;
     -webkit-animation: Hero-Title linear;
     -o-animation: Hero-Title linear;
     animation: Hero-Title linear;
-    -webkit-animation-timeline: view();
-    -o-animation-timeline: view();
     animation-timeline: view();
-    -webkit-animation-range:exit -200px;
-    -o-animation-range:exit -200px;
     animation-range:exit -200px;
 }
 
@@ -116,27 +106,14 @@
     font-weight: 535;
     letter-spacing: -0.05rem;
 }
-
-@-webkit-keyframes Hero-Title {
-    from {scale: 0.5 0.5;}
-    to   {scale: 1 1;}
-}
-@-o-keyframes Hero-Title {
-    from {scale: 0.5 0.5;}
-    to   {scale: 1 1;}
-}
 @keyframes Hero-Title {
-    from {scale: 0.5 0.5;}
-    to   {scale: 1 1;}
-}
-@-webkit-keyframes Hero-Background {
-    to {background: black}
-}
-@-o-keyframes Hero-Background{
-    to {background: black}
+    from {scale: 0.5 0.5;position: sticky}
+    to   {scale: 1 1;position: static}
 }
 @keyframes Hero-Background{
-    to {background: black}
+    to {
+        background: black;
+    }
 }
 
 @media screen and (max-width:  768px) {
@@ -160,14 +137,6 @@
         font-size: 1.4rem;
         font-weight: 545;
     }
-    @-webkit-keyframes Hero-Title {
-        from {scale: 1 1; opacity: 1;}
-        to   {scale: 1.5 1.5; opacity: 0;}
-    }
-    @-o-keyframes Hero-Title {
-        from {scale: 1 1; opacity: 1;}
-        to   {scale: 1.5 1.5; opacity: 0;}
-    }
     @keyframes Hero-Title {
         from {scale: 1 1; opacity: 1;}
         to   {scale: 1.5 1.5; opacity: 0;}
@@ -181,20 +150,27 @@
 **************************************************/
 
 .about {
-    height: 100vh;
+    height: 120vh;
     width: 100%;
     background: black;
     -webkit-animation: fad-in linear;
     -o-animation: fad-in linear;
     animation: fad-in linear;
 }
-.about_title {
+.about_title_container{
     background-color: black;
+}
+.about_title {
     color: slategray;
-    font-size: 5rem;
+    font-size: 7rem;
     letter-spacing: -0.05rem;
     font-weight: 545;
     padding: 4rem;
+    -webkit-animation: fade-in linear forwards;
+    -o-animation: fade-in linear forwards;
+    animation: fade-in linear forwards;
+    animation-timeline: view();
+    animation-range: contains;
 }
 .about_container {
     display: grid;
@@ -206,11 +182,7 @@
     -webkit-animation: fade-in linear forwards;
     -o-animation: fade-in linear forwards;
     animation: fade-in linear forwards;
-    -o-animation-timeline: view();
-    -webkit-animation-timeline: view();
     animation-timeline: view();
-    -o-animation-range: entry;
-    -webkit-animation-range: entry;
     animation-range: entry;
 }
 
@@ -274,15 +246,6 @@
     font-weight: 535;
     letter-spacing: -0.05rem;
 }
-
-@-webkit-keyframes fade-in {
-    from{scale: 0.8; opacity: 0;}
-    to { scale: 1; opacity: 1;}
-}
-@-o-keyframes fade-in {
-    from{scale: 0.8; opacity: 0;}
-    to { scale: 1; opacity: 1;}
-}
 @keyframes fade-in {
     from{scale: 0.8; opacity: 0;}
     to { scale: 1; opacity: 1;}
@@ -298,6 +261,7 @@
         padding-top: 1rem;
     }
     .about_title {
+        font-size: 5rem;
         padding: 6rem 2rem 2rem;
     }
     .about_container {
@@ -317,8 +281,6 @@
         -webkit-animation: fade-in linear;
         -o-animation: fade-in linear;
         animation: fade-in linear;
-        -webkit-animation-timeline:view(600px 0px) ;
-        -o-animation-timeline: view(600px 0px);
         animation-timeline: view(600px 0px);
     }
     .grid-item-5 h1{
@@ -356,6 +318,11 @@
     letter-spacing: 0.05rem;
     font-weight: 555;
     padding: 3rem;
+    -webkit-animation: fade-in linear;
+    -o-animation: fade-in linear;
+    animation: fade-in linear;
+    animation-timeline: view();
+    animation-range: contains;
 }
 
 .portfolio_container {
