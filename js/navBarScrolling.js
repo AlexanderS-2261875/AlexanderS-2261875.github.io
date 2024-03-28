@@ -18,9 +18,9 @@ function handleCheckboxChange() {
     const colorMode = checkbox.checked ? '#f1f1f1' : '#000000';
 
     root.style.setProperty('--colorMode', colorMode);
-    root.style.setProperty('--inverseColorMode', checkbox.checked ? '#000000' : '#ffffdf');
-    root.style.setProperty('--colorCardsOuter', checkbox.checked ? '26262659' : 'f1f1f1');
-    root.style.setProperty('--colorCardsInner', checkbox.checked ? '000000' : 'ffffff');
+    root.style.setProperty('--inverseColorMode', checkbox.checked ? '#000000' : '#f1f1f1');
+    root.style.setProperty('--colorCardsOuter', checkbox.checked ? '#f1f1f159' : '#26262659');
+    root.style.setProperty('--colorCardsInner', checkbox.checked ? '#ffffff' : '#000000');
     console.log(checkbox.state);
 }
 
