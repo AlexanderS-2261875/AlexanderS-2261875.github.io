@@ -6,7 +6,6 @@ function handleScroll() {
     const navbar = document.getElementById('navbar');
     const aboutY = document.getElementById('about').offsetTop;
     const pos = scrollY - aboutY;
-
     navbar.style.opacity = scrollY > 10 ? '0.80' : '1';
     navbar.style.height = scrollY > 10 ? '50px' : '60px';
     navbar.style.background = !document.querySelector('.checkbox').checked && pos > 0 ? 'rgba(255,255,255,0.15)' : 'rgba(0,0,0)';
@@ -30,3 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Add change event listener to checkbox
     document.querySelector('.checkbox').addEventListener('change', handleCheckboxChange);
 });
+
+function toggleMobileMenu(menu) {
+    menu.classList.toggle('open')
+}
