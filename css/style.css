@@ -104,8 +104,29 @@
     font-weight: 535;
     letter-spacing: -0.05rem;
 }
+@media screen and ( max-width: 425px ){
+    .hero_container {
+        display:flex;
+        align-content: center;
+        justify-items: center;
+        justify-content: center;
+        text-align: center;
+        flex-direction: column;
+    }
 
-@media screen and (max-width:  768px) {
+    .hero_container h1 {
+        padding-top: 0;
+        font-size: 5rem;
+        letter-spacing: -0.15rem;
+    }
+
+    .hero_container p {
+        font-size: 1.4rem;
+        font-weight: 545;
+    }
+}
+
+@media screen and (max-width: 768px ) and ( min-width: 426px ){
     .hero_container {
         display:flex;
         align-content: center;
@@ -128,7 +149,7 @@
     }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and ( max-width: 1024px ) and ( min-width: 769px) {
     .hero_container {
         display: flex;
         align-content: center;
