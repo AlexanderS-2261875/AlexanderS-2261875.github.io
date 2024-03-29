@@ -304,7 +304,7 @@
     }
 }
 
-@media screen and (max-width:  1024px) {
+@media screen and (max-width:  1024px) and (min-width: 769px) {
     .about {
         display: flex;
         height: 100%;
@@ -354,7 +354,6 @@
 /**************************************************
     :: portfolio
 **************************************************/
-
 
 .portfolio {
     margin: auto;
@@ -465,7 +464,7 @@
 
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1024px) and (min-width: 769px) {
     .portfolio {
         display: flex;
         flex-direction: column;
@@ -557,7 +556,53 @@
     font-weight: 555;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 425px) {
+
+    .contact-container {
+        display: grid;
+        row-gap: .5rem;
+        align-self: center;
+        margin: 0;
+    }
+
+    .contact-container-iframe {
+        float: none;
+    }
+    .contact-container-iframe iframe {
+        width: 90%;
+        height: 325px;
+    }
+
+    .contact-container-list {
+        float: none;
+        margin:0;
+        list-style: none;
+    }
+
+    .contact-container-list-element {
+        border: 2px solid rgba(42, 42, 42, 1.81);
+        border-radius: 1rem;
+        padding: 1rem;
+        margin: 0;
+    }
+
+    .contact-container-list-element a {
+        color: var(--inverseColorMode);
+        text-decoration: underline;
+        font-size: 1.5rem;
+        font-weight: 545;
+    }
+
+    .contact-container-list-element p {
+        color: var(--inverseColorMode);
+        font-size: 1.5rem;
+        font-weight: 545;
+    }
+
+}
+
+
+@media screen and (max-width: 768px) and (min-width: 426px) {
     .contact {
         background: var(--colorMode);
         height: 100vh;
@@ -611,10 +656,10 @@
     }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1024px) and (min-width: 769px) {
     .contact-container {
         display: grid;
-        row-gap: 2rem;
+        row-gap: 1rem;
         align-self: center;
     }
 
