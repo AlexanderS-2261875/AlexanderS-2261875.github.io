@@ -298,6 +298,7 @@
     .about_container {
         align-items: center;
         justify-content: center;
+        justify-items: center;
         height: 100%;
         width: 95%;
     }
