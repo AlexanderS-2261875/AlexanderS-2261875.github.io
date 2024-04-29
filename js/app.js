@@ -11,6 +11,3 @@ function handleScroll() {
 }
 
 window.addEventListener('scroll', handleScroll);
-function toggleMobileMenu(menu) {
-    menu.classList.toggle('open')
-}
