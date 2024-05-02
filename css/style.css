@@ -23,6 +23,7 @@
     --colorCardsInner: #000000;
     --colorCardsBorder: rgba(42, 42, 42);
     --schmittBlue: #1e202c !important;
+    --logoGradient-linear: linear-gradient(to right, darkblue, deepskyblue, yellow, #5c0035);
 }
 /**************************************************
     :: navbar
@@ -532,19 +533,83 @@
     width: 30vw;
     height: 40vh;
 }
-
 .freelance-container-list-image,
 .freelance-container-list-language,
 .freelance-container-list-text {
     border: 2px solid var(--colorCardsBorder);
     border-radius: 0.5rem;
+/*    Todo: REMOVE LATER*/
 }
 
-@media screen and (max-width: 768px) {
-    .freelance-container-list {
-        display: grid;
+.freelance-language-list {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.freelance-language-list-element {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 1rem;
+}
 
+.freelance-language-list-element img {
+    width: 125px;
+    height: 125px;
+    padding: 1rem;
+}
+    .bar {
+        width: 100%;
+        padding: 0.25rem;
+        border-radius: 1rem;
+        background: linear-gradient(to right, darkblue, deepskyblue, yellow, #5c0035);
+        background: -webkit-linear-gradient(to right, darkblue, deepskyblue, yellow, #5c0035);
+        background: -moz-linear-gradient(to right, darkblue, deepskyblue, yellow, #5c0035);
+        background: -ms-linear-gradient(to right, darkblue, deepskyblue, yellow, #5c0035);
+        background: -o-linear-gradient(to right, darkblue, deepskyblue, yellow, #5c0035);
+        border: 1px solid var(--colorCardsBorder);
     }
+/* TODO: ipad media query 1024px */
+@media screen and (max-width: 768px) {
+    .freelance {
+        height: 200vh;
+    }
+
+    .freelance h1 {
+        font-size: 12vw;
+    }
+
+    .freelance-container-list {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .freelance-container-list-image{
+        width: 75vw;
+    }
+    .freelance-container-list-text {
+        width: 90vw;
+    }
+    .freelance-container-list-text p{
+        font-size: 0.9rem;
+    }
+    .freelance-container-list-language {
+        width: 100vw;
+    }
+
+    .freelance-language-list {
+        padding: 0;
+    }
+    .freelance-language-list-element {
+        padding: 0.5rem
+    }
+    .freelance-language-list-element img {
+        width: 100px;
+        height: 100px;
+    }
+
 }
 
 /**************************************************
