@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="nl" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <link rel="icon" href="img/Logo.png">
@@ -24,14 +24,6 @@
                     <li class="navbar_item"><a class="navbar_links" href="#about">About</a></li>
                     <li class="navbar_item"><a class="navbar_links" href="#portfolio">Portfolio</a></li>
                     <li class="navbar_item"><a class="navbar_links" href="#contact">Contact</a></li>
-                    <li class="navbar_item">
-                        <div class="toggle-switch">
-                            <label class="switch-label">
-                                <input type="checkbox" class="checkbox">
-                                <span class="slider"></span>
-                            </label>
-                        </div>
-                    </li>
                 </ul>
             </div>
         </div>
@@ -147,12 +139,26 @@
         <div class="contact" id="contact">
             <h1>Contact</h1>
             <div class="contact-container">
-                <ul class="contact-container-list">
+                <img class="contact-logo" src="./img/Logo.png" alt="SCHMITT SOFTWARE Logo">
+                <ul class="contact-container-list-info">
+                    <li class="contact-info-list-element">SCHMITT SOFTWARE</li>
+                    <li class="contact-info-list-element">Alexander Schmitt</li>
+                    <li class="contact-info-list-element">Voort 5 Geel, 2440 Antwerpen Belgie</li>
+                </ul>
+                <ul class="contact-container-list-contact">
                     <li class="contact-container-list-element">
-                        <p>Email: <a href = "mailto: schmittsoftware@gmail.com">schmittsoftware@gmail.com</a></p>
+                        <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 16 16" fill="white" class="contact-icon">
+                            <path d="M7.25 11.5a.75.75 0 0 0 0 1.5h1.5a.75.75 0 0 0 0-1.5h-1.5Z"/>
+                            <path fill-rule="evenodd" d="M6 1a2.5 2.5 0 0 0-2.5 2.5v9A2.5 2.5 0 0 0 6 15h4a2.5 2.5 0 0 0 2.5-2.5v-9A2.5 2.5 0 0 0 10 1H6Zm4 1.5h-.5V3a.5.5 0 0 1-.5.5H7a.5.5 0 0 1-.5-.5v-.5H6a1 1 0 0 0-1 1v9a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-9a1 1 0 0 0-1-1Z" clip-rule="evenodd" />
+                        </svg>
+                        <a href="tel:">+32 468 34 51 81</a>
                     </li>
                     <li class="contact-container-list-element">
-                        <p>telefoon: <a href="tel: +32468345181">+32 468 34 51 81</a></p>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="white" class="contact-icon">
+                            <path d="M2.5 3A1.5 1.5 0 0 0 1 4.5v.793c.026.009.051.02.076.032L7.674 8.51c.206.1.446.1.652 0l6.598-3.185A.755.755 0 0 1 15 5.293V4.5A1.5 1.5 0 0 0 13.5 3h-11Z" />
+                            <path d="M15 6.954 8.978 9.86a2.25 2.25 0 0 1-1.956 0L1 6.954V11.5A1.5 1.5 0 0 0 2.5 13h11a1.5 1.5 0 0 0 1.5-1.5V6.954Z" />
+                        </svg>
+                        <a href="mailto:">schmitt.software@gmail.com</a>
                     </li>
                 </ul>
             </div>
