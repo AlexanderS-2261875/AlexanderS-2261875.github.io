@@ -79,12 +79,12 @@
     text-decoration: none;
     font-size: 0.85rem;
     padding: 1rem;
+    transition: all 0.5s ease-out;
 }
 
 .navbar-link:hover {
     color: #0067ff;
     text-decoration: none;
-    font-weight: 90;
 }
 
 .mobile-menu-container {
@@ -117,7 +117,7 @@
 .hero-container h1 {
     color: black;
     font-size: 18vw;
-    letter-spacing: 0.05rem;
+    letter-spacing: -0.809rem;
     font-weight: 555;
 }
 
@@ -705,47 +705,5 @@
     .contact-container-list-element a,
     .contact-container-list-element p {
         font-size: 1.2rem;
-    }
-}
-
-/**************************************************
-    :: footer
-**************************************************/
-
-.footer {
-    background-color: var(--schmittBlue);
-}
-
-.footer-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.footer-container-list {
-    display: flex;
-    list-style: none;
-    width: 50%;
-    justify-content: space-between;
-}
-
-.footer-list-element p {
-    color: var(--light);
-    font-weight: 500;
-}
-
-@media screen and (max-width: 768px) {
-    .footer-container-list {
-        width: 75%;
-    }
-}
-
-@media screen and (max-width: 450px) {
-    .footer-container-list {
-        width: 50%;
-    }
-    .footer-list-element p {
-        font-size: 0.8rem;
-        font-weight: 300;
     }
 }
